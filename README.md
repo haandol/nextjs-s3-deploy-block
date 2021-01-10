@@ -1,6 +1,8 @@
-# Next.js S3 Deploy Block
+# Next.js S3 Deployment Block
 
-This repository is for hosting Nextjs project using private S3(no public-read) via Cloudfront
+This repository is for hosting Nextjs project Cloudfront with Origin Access Identity
+
+Cloudfront with Origin Access Identity(OAI) allows you to hosting static web-site on S3 keep blocking direct access from public
 
 <img src="img/architecture.png" />
 
