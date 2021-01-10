@@ -21,12 +21,12 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
-    "@aws-cdk/aws-cloudfront": "^1.83.0",
-    "@aws-cdk/aws-cloudfront-origins": "^1.83.0",
-    "@aws-cdk/aws-codebuild": "^1.83.0",
-    "@aws-cdk/aws-codecommit": "^1.83.0",
-    "@aws-cdk/aws-codepipeline": "^1.83.0",
-    "@aws-cdk/aws-codepipeline-actions": "^1.83.0",
+    "@aws-cdk/aws-cloudfront": "1.83.0",
+    "@aws-cdk/aws-cloudfront-origins": "1.83.0",
+    "@aws-cdk/aws-codebuild": "1.83.0",
+    "@aws-cdk/aws-codecommit": "1.83.0",
+    "@aws-cdk/aws-codepipeline": "1.83.0",
+    "@aws-cdk/aws-codepipeline-actions": "1.83.0",
     "@aws-cdk/core": "1.83.0",
     "source-map-support": "^0.5.16"
   }
