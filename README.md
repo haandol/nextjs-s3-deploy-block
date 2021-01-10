@@ -2,6 +2,8 @@
 
 This repository is for hosting Nextjs project using private S3(no public-read) via Cloudfront
 
+<img src="img/architecture.png" />
+
 # Prerequisites
 
 - Nodejs 10.x
@@ -22,6 +24,19 @@ $ cdk bootstrap
 ## Create nextjs repo
 
 create repository to Codecommit
+
+```bash
+$ aws codecommit create-repository --repository-name nextjs-example
+```
+
+clone sample project, in this case we gonna use [this](https://github.com/haandol/nextjs-example) repo and push it to Codecommit repo
+
+```bash
+$ git clone https://github.com/haandol/nextjs-example
+$ cd nextjs-example
+$ git remote set-url origin codecommit::ap-northeast-2://nextjs-example
+$ git push
+```
 
 ## Setup config
 
