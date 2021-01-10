@@ -1,4 +1,4 @@
-# Next.js S3 Deploy Example
+# Next.js S3 Deploy Block
 
 This repository is for hosting Nextjs project using private S3(no public-read) via Cloudfront
 
