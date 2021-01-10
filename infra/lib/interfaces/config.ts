@@ -1,5 +1,5 @@
 export namespace App {
-  export const ns = 'S3DeployDemo'
+  export const ns = 'NextjsS3DeployDemo'
 }
 
 export const Repository = {
