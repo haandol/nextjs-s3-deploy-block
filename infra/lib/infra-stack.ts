@@ -20,6 +20,7 @@ export class InfraStack extends cdk.Stack {
 
     const bucket = new s3.Bucket(this, `${App.ns}Bucket`, {
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      autoDeleteObjects: true,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     })
     const originAccessIdentity = new cloudfront.OriginAccessIdentity(this, `${App.ns}OAI`)
