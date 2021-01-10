@@ -19,6 +19,10 @@ $ cdk bootstrap
 
 # Usage
 
+## Create nextjs repo
+
+create repository to Codecommit
+
 ## Setup config
 
 edit `Repository` varialbe at [**lib/interfaces/config.ts**](lib/interfaces/config.ts)
