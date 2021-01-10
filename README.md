@@ -1,1 +1,1 @@
-# s3-oai-example
+# Next.js S3 Deploy Example
