@@ -54,6 +54,15 @@ the repository should be Codecommit git repository
 $ cdk deploy "*" --require-approval never
 ```
 
+## Visit site
+
+```bash
+$ aws cloudformation describe-stacks --stack-name NextjsS3DeployDemoInfraStack --query "Stacks[0].Outputs[?ExportName=='NextjsS3DeployDemoDistDomainName'].OutputValue" --output text
+d20rbxn7hfe3an.cloudfront.net
+
+$ open http://d20rbxn7hfe3an.cloudfront.net
+```
+
 # Cleanup
 
 destroy provisioned cloud resources
