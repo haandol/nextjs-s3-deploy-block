@@ -26,6 +26,13 @@ export class Cloudfront extends cdk.Construct {
         compress: false,
       },
       defaultRootObject: 'index.html',
+      errorResponses: [
+        {
+          httpStatus: 403,
+          responseHttpStatus: 200,
+          responsePagePath: '/index.html',
+        }
+      ]
     })
     this.distributionId = cfDist.distributionId
 
