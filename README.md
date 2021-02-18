@@ -42,7 +42,7 @@ $ git push
 
 ## Setup config
 
-if you want to use your own repository, edit `Repository` variable at [**lib/interfaces/config.ts**](lib/interfaces/config.ts)
+if you want to use your own repository, edit `Repository` variable at [**infra/lib/interfaces/config.ts**](lib/interfaces/config.ts)
 
 ```bash
 $ vim lib/interfaces/config.ts
