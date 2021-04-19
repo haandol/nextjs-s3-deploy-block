@@ -4,5 +4,6 @@ export namespace App {
 
 export const Repository = {
   Region: 'ap-northeast-2',
+  Branch: 'master',
   Name: 'nextjs-example',
 }

@@ -6,6 +6,7 @@ import { App } from './interfaces/config'
 
 interface Props extends cdk.StackProps {
   repositoryRegion: string
+  repositoryBranch: string
   repositoryName: string
 }
 

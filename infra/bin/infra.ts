@@ -7,5 +7,6 @@ import { App, Repository } from '../lib/interfaces/config'
 const app = new cdk.App()
 new InfraStack(app, `${App.ns}InfraStack`, {
   repositoryName: Repository.Name,
+  repositoryBranch: Repository.Branch,
   repositoryRegion: Repository.Region,
 })

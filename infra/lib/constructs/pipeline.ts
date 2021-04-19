@@ -9,6 +9,7 @@ import { App } from '../interfaces/config'
 
 interface Props extends cdk.StackProps {
   repositoryRegion: string
+  repositoryBranch: string
   repositoryName: string
   distributionId: string
   bucket: s3.IBucket
@@ -29,7 +30,7 @@ export class Pipeline extends cdk.Construct {
     sourceStage.addAction(new cpactions.CodeCommitSourceAction({
       actionName: 'CodeCommitSource',
       output: sourceOutput,
-      branch: 'main',
+      branch: props.repositoryBranch,
       repository: codeRepo,
     }))
 
