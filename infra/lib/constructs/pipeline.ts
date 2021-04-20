@@ -20,7 +20,8 @@ export class Pipeline extends cdk.Construct {
     super(scope, id)
 
     const pipeline = new codepipeline.Pipeline(this, `Pipeline`, {
-      pipelineName: `${App.ns}Pipeline`
+      pipelineName: `${App.ns}Pipeline`,
+      crossAccountKeys: false,
     })
 
     // SourceStage - clone source
