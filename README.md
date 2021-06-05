@@ -16,28 +16,28 @@ Cloudfront with Origin Access Identity(OAI) allows you to hosting static web-sit
 Install project dependencies
 
 ```bash
-$ npm i -g cdk@1.83.0
+$ npm i -g cdk@1.106.1
 $ npm i
 $ cdk bootstrap
 ```
 
 # Usage
 
-## Create nextjs repo
+## Create nextjs repository to Codecommit
 
-create repository to Codecommit
+create codecommit repository
 
 ```bash
 $ aws codecommit create-repository --repository-name nextjs-example
 ```
 
-clone sample project, in this case we gonna use [this](https://github.com/haandol/nextjs-example) repo and push it to Codecommit repo
+clone sample project, in this case we gonna use [this](https://github.com/haandol/nextjs-example) repo and push it to Codecommit repository
 
 ```bash
 $ git clone https://github.com/haandol/nextjs-example
 $ cd nextjs-example
 $ git remote set-url origin codecommit::ap-northeast-2://nextjs-example
-$ git push
+$ git push origin
 ```
 
 ## Setup config
@@ -58,11 +58,13 @@ $ cdk deploy "*" --require-approval never
 
 ## Visit site
 
+After every commit on your NextJs web repository, CodePipeline will build and deploy your CSR app on CloudFront.
+
 ```bash
 $ aws cloudformation describe-stacks --stack-name NextjsS3DeployDemoInfraStack --query "Stacks[0].Outputs[?ExportName=='NextjsS3DeployDemoDistDomainName'].OutputValue" --output text
-d20rbxn7hfe3an.cloudfront.net
+xxx.cloudfront.net
 
-$ open http://d20rbxn7hfe3an.cloudfront.net
+$ open http://xxx.cloudfront.net
 ```
 
 # Cleanup
