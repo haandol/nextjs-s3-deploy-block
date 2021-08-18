@@ -8,7 +8,7 @@ Cloudfront with Origin Access Identity(OAI) allows you to hosting static web-sit
 
 # Prerequisites
 
-- Nodejs 10.x
+- Nodejs 14.x
 - AWS Account and Locally configured AWS credential
 
 # Installation
@@ -16,7 +16,7 @@ Cloudfront with Origin Access Identity(OAI) allows you to hosting static web-sit
 Install project dependencies
 
 ```bash
-$ npm i -g cdk@1.106.1
+$ npm i -g cdk@1.117
 $ npm i
 $ cdk bootstrap
 ```
