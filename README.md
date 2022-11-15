@@ -16,7 +16,7 @@ Cloudfront with Origin Access Identity(OAI) allows you to hosting static web-sit
 Install project dependencies
 
 ```bash
-$ npm i -g cdk@1.117
+$ npm i -g cdk@2.50
 $ npm i
 $ cdk bootstrap
 ```
