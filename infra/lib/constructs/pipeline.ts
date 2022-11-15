@@ -47,7 +47,7 @@ export class Pipeline extends Construct {
     const reactStage = pipeline.addStage({ stageName: 'React' });
     const reactProject = new codebuild.Project(this, `${App.ns}ReactProject`, {
       projectName: `${App.ns}ReactProject`,
-      buildSpec: this.createReactBuildspec(props, sourceOutput.artifactName!),
+      buildSpec: this.createReactBuildspec(),
       environment: {
         buildImage: codebuild.LinuxBuildImage.AMAZON_LINUX_2_3,
         privileged: false,
@@ -110,10 +110,7 @@ export class Pipeline extends Construct {
     );
   }
 
-  createReactBuildspec(
-    props: Props,
-    artifactName: string
-  ): codebuild.BuildSpec {
+  createReactBuildspec(): codebuild.BuildSpec {
     const buildCommands: string[] = [`npm i`, `npm run build`];
 
     return codebuild.BuildSpec.fromObject({
